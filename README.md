@@ -1,8 +1,6 @@
-# Dockerized Centrifugo (v4) and Dragonfly
+# Dockerized Centrifugo (v4) and Redis
 
 - Centrifugo: https://github.com/centrifugal/centrifugo
-- Dragonfly: https://github.com/dragonflydb/dragonfly
-
 
 ## Demo
 
