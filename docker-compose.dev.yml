@@ -14,17 +14,6 @@ services:
     volumes:
       - ./misc:/centrifugo
 
-  # dragonfly:
-  #   image: docker.dragonflydb.io/dragonflydb/dragonfly:latest
-  #   container_name: dragonfly_dev
-  #   ulimits:
-  #     memlock: -1
-  #   command: ["dragonfly", "--requirepass=foobar", "--port", "8990", "--dbfilename", "dragonfly.db"]
-  #   ports:
-  #     - 8990:8990
-  #   volumes:
-  #     - ./data/:/data
-
   redis:
     image: redis:7.0.4-alpine3.16
     container_name: redis_dev
@@ -33,5 +22,3 @@ services:
       - 6379:6379
     volumes:
       - ./redis_data:/data
-
-volumes: {}
