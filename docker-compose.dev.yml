@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  centrifugo:
+    image: centrifugo/centrifugo:v4
+    container_name: centrifugo_dev
+    ulimits:
+      nofile:
+        soft: "65536"
+        hard: "65536"
+    command: ["centrifugo", "-c", "config.json"]
+    ports:
+      - 8000:9000
+    volumes:
+      - ./misc:/centrifugo
+
+  # dragonfly:
+  #   image: docker.dragonflydb.io/dragonflydb/dragonfly:latest
+  #   container_name: dragonfly_dev
+  #   ulimits:
+  #     memlock: -1
+  #   command: ["dragonfly", "--requirepass=foobar", "--port", "8990", "--dbfilename", "dragonfly.db"]
+  #   ports:
+  #     - 8990:8990
+  #   volumes:
+  #     - ./data/:/data
+
+  redis:
+    image: redis:7.0.4-alpine3.16
+    container_name: redis_dev
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "foobar"]
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis_data:/data
+
+volumes: {}

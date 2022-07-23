@@ -1,0 +1,15 @@
+{
+    "token_hmac_secret_key": "d1a1061c-90e4-4c30-aefa-e259c2905e4e",
+    "admin": true,
+    "admin_password": "7e78de18-236c-4180-9259-009479e4b20c",
+    "admin_secret": "6354631d-bbea-4340-a2a0-774f9f9532ad",
+    "api_key": "55aafd5e-2abb-4bfc-b419-9cd5148769f7",
+    "allowed_origins": ["*"],
+    "allow_subscribe_for_client": true,
+    "debug": true,
+    "log_level": "debug",
+    "port": "9000",
+    "engine": "redis",
+    "redis_address": "redis:6379",
+    "redis_password": "foobar"
+}
