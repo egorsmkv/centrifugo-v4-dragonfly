@@ -7,5 +7,5 @@
 Generate a token:
 
 ```bash
-docker exec -it centrifugo_dev centrifugo gentoken -u 1
+docker exec -it centrifugo_dev centrifugo gentoken -u 2
 ```

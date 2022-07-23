@@ -5,11 +5,36 @@
     "admin_secret": "6354631d-bbea-4340-a2a0-774f9f9532ad",
     "api_key": "55aafd5e-2abb-4bfc-b419-9cd5148769f7",
     "allowed_origins": ["*"],
-    "allow_subscribe_for_client": true,
     "debug": true,
     "log_level": "debug",
     "port": "9000",
     "engine": "redis",
     "redis_address": "redis:6379",
-    "redis_password": "foobar"
+    "redis_password": "foobar",
+
+    "join_leave": true,
+
+    "presence": true,
+    "history_size": 10,
+    "history_ttl": "300s",
+    "force_recovery": true,
+    "allow_subscribe_for_client": true,
+    "allow_subscribe_for_anonymous": true,
+    "allow_publish_for_subscriber": true,
+    "allow_publish_for_anonymous": true,
+    "allow_history_for_subscriber": true,
+    "allow_history_for_anonymous": true,
+    "allow_presence_for_subscriber": true,
+    "allow_presence_for_anonymous": true,
+
+    "channels": [
+        {
+        
+          "name": "events"
+
+        },
+        {
+          "name": "gossips"
+        }
+    ]
 }
